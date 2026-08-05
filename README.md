@@ -71,22 +71,6 @@ Galaxy Fold (จอปิด), iPad mini และรันตัวเกมท
 
 ---
 
-## เอาขึ้นเว็บ
-
-**ต้องแก้ก่อนเสมอ:** `<a class="home" href="/">` ให้ชี้หน้าแรกจริงของคุณ
-
-| แพลตฟอร์ม | วิธี |
-|---|---|
-| Netlify / Vercel / GitHub Pages | วาง `404.html` ที่รากของ publish directory |
-| Nginx | `error_page 404 /404.html;` + `location = /404.html { internal; }` |
-| Apache | `ErrorDocument 404 /404.html` |
-| Express | `app.use((req,res)=>res.status(404).sendFile(__dirname+'/public/404.html'))` |
-| Next.js | วางใน `public/` แล้วให้ `app/not-found.tsx` เรนเดอร์ iframe เต็มจอ |
-
-ให้เซิร์ฟเวอร์ส่ง HTTP status **404** จริง ไม่ใช่ 200 (ในไฟล์มี `<meta name="robots" content="noindex, follow">` แล้ว)
-
----
-
 ## ปรับแต่ง
 
 ### แถบซ้าย
